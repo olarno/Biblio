@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Biblio{% endblock %}
+
+{% block body %}
+<div>
+<ul>
+{% for book in books %}
+<li>{{book.name}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}

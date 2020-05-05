@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Biblio{% endblock %}
+
+{% block body %}
+<div class="container">
+
+<div class="row">
+<h1>Ajout d'un livre</h1>
+</div>
+
+<div class="container">
+{{ form_start(form) }}
+
+{{ form_row(form.Name) }}
+{{ form_row(form.Resume) }}
+{{ form_row(form.Author) }}
+{{ form_row(form.isRead) }}
+
+<button type="reset">Reset</button>
+<button type="submit">Enregister</button>
+{{ form_end(form) }}
+</div>
+</div>
+
+{% endblock %}
