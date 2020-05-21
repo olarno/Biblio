@@ -1,17 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}Biblio ~ Homepage{% endblock %}
 
 {% block body %}
 
 <div class="container">
-<a href="{{ path('book_add') }}">Ajouter un livre</a>
-    {% for book in books %}
-        <div class="row">
-            <p>Title : <em>{{ book.name }}</em>.</p>
-            <p>Auteur :  {{ book.author }}</p>
-        </div>
-    {% endfor %}
+
+<table class="table table-hover mt-3">
+  <thead>
+    <tr>
+    
+      <th scope="col">Titre</th>
+      <th scope="col">Auteur</th>
+      <th scope="col">Resume</th>
+      <th scope="col">Lu/ pas lu</th>
+    </tr>
+  </thead> 
+{% for book in books %}
+    <tr class="table-{% if loop.index is even %}light{% else %}dark{% endif %}">
+   
+      <td>{{book.name}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.resume}}</td>
+      <td>{{book.isRead}}</td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table> 
+
 </div>
 
 {% endblock %}
