@@ -42,7 +42,7 @@ class BookController extends AbstractController
             $em->persist($book);
             $em->flush();
 
-            return $this->redirectToRoute('book_browse');
+            return $this->redirectToRoute('main');
 
         }
 

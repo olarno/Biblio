@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+<a href="{{ path('book_add') }}">Ajouter un livre</a>
+    {% for book in books %}
+        <div class="row">
+            <p>Title : <em>{{ book.name }}</em>.</p>
+            <p>Auteur :  {{ book.author }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
