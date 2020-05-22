@@ -22,4 +22,14 @@ class MainController extends AbstractController
             'people' => $people,
         ]);
     }
+
+        /**
+     * @Route("/documentation", name="documentation")
+     */
+    public function documentation()
+    {
+        return $this->render('main/documentation.html.twig', [
+           
+        ]);
+    }
 }

@@ -54,7 +54,7 @@
     </tr>
   </thead> 
 {% for person in people %}
-    <tr class="table-{% if loop.index is even %}light{% else %}dark{% endif %}">
+    <tr class="table-{% if loop.index is odd %}light{% else %}dark{% endif %}">
       <td>{{person.familyName}}</a></td>
       <td>{{person.name}}</td>
     </tr>

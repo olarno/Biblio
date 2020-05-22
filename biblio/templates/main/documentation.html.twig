@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Biblio ~ Documentation{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+<div class="row">
+<h1>
+  Documentation
+</h1>
+</div>
+
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#home">Pourquoi ?</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#profile">Comment utiliser la Biblio</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active show" id="home">
+    <h5>Contexte</h5> 
+        <p>Stocker des livres, (d'autres support pour les versions futurs), est une bonne chose pour augmenter sa culture, mais peut vite nous dépasser. Encore plus quand vous commencer a preter ces derniers.</p>
+    <h5>Problème</h5>
+        <p>Avoir une base des livres, lu ou pas, préter ou pas.</p>
+    <h5>Objectif</h5>
+        <p>Solution simple de gestion des livres et des emprunteurs.</p>
+  </div>
+  <div class="tab-pane fade" id="profile">
+    <h5>la Homepage</h5>
+        <p>Sur la homepage vous avez les 5 derniers ajouts de livre et de personnes. La différenciation de couleurs n'as aucune importance sur cette page.</p>
+    <h5>Livres -> liste</h5>
+        <p>Sur le listing des livre vous avez accès directement aux informations générales : le titre, l'auteur, un bout du résumé, si vous l'avez lu ainsi que le nom de l'emprunteur.</p>
+        <p>Sur cette page il y a une différenciation de couleurs,</p>
+        <p>les livres en gris sont emprunter et le nom de l'emprunteur est notifié.</p>
+        <p>Les livres en noir ne sont pas emprunter.</p>
+    <h5>Page d'un livre</h5>
+        <p>Renvoie la liste des informations completes connues pour le livre en question.</p>
+        <p>Titre, auteur, résumé, lu ou pas et nom de l'emprunteur.</p>
+        <p>Il y a une différence de couleur : noir si le livre n'est pas lu, gris si il est lu.</p>
+        <p>On retrouver aussi un acces au formulaire d'édition de ce livre.</p>
+    <h5>Ajout / édition d'un livre</h5>
+        <p>Génération du formulaire d'ajout / d'édition d'un livre.</p>
+        <p>Les champs obligatoire sont rensignés par une *</p>
+        <p>Pour ajouter un emprunteur il est necessaire en premier lieu de créer la personne.</p>
+    <h5>Personne -> liste</h5>
+        <p>Listing des personnes, avec uniquement les données de base : Nom, Prénom</p>
+    <h5>Personne -> ajout</h5>
+        <p>Accès au formulaire d'ajout d'un personne, afin de pouvoir l'indiquer commen emprunteur.</p>
+        <p>Formulaire simple ne necessitant uniquement le nom et le prénom de la personne.</p>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+{% endblock %}
+
