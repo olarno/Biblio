@@ -1,0 +1,12 @@
+App\Entity\Person:
+  person_{1..15}:
+    name (unique): '<firstName()>'
+    familyName (unique) : '<lastName()>'
+
+App\Entity\Book:
+  book_{1..50}:
+    name (unique): '<catchPhrase()>'
+    author : '<name()>'
+    resume : '<realText()>'
+    isRead : '<boolean()>'
+    borrow : '@person*'
