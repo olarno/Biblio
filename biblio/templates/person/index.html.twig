@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bilio ~ Liste des emprunteurs{% endblock %}
+
+{% block body %}
+<div class="container">
+
+<div class="row">
+<h1>
+  Emprunteurs
+</h1>
+</div>
+
+<table class="table table-hover mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Nom de famille</th>
+      <th scope="col">Prénom</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for person in people %}
+    <tr class="table-active">
+      <th scope="row">{{ person.familyName}}</th>
+      <td>{{person.name}}</td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table> 
+
+</div>
+{% endblock %}

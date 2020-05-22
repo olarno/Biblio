@@ -9,9 +9,21 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{ path('main') }}">Index</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ path('book_add') }}">Ajouter un livre</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Livres</a>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="{{ path('book_browse') }}">Liste</a>
+        <a class="dropdown-item" href="{{ path('book_add') }}">Ajout</a>
+        </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personne</a>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="{{ path('person_browse') }}">Liste</a>
+        <a class="dropdown-item" href="{{ path('person_add') }}">Ajout</a>
+        </div>
+      </li>
+
     </ul>
 
   </div>

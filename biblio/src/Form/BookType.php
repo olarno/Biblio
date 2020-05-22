@@ -19,13 +19,13 @@ class BookType extends AbstractType
     {
         $builder
             ->add('Name', TextType::class, [
-                'label' => 'Nom du livre',
+                'label' => 'Nom du livre *',
                 'constraints' => [
                     new NotNull(),
                     new NotBlank(),
             ]])
             ->add('Author', TextType::class, [
-                'label' => 'Nom de l\'auteur',
+                'label' => 'Nom de l\'auteur *',
                 'constraints' => [
                     new NotNull(),
                     new NotBlank(),
@@ -40,7 +40,7 @@ class BookType extends AbstractType
                 ]
             ])
             ->add('isRead', CheckboxType::class, [
-                'label' => 'Déjà lu ?',
+                'label' => 'Déjà lu ? *',
                 'required' => false
             ])
         ;
