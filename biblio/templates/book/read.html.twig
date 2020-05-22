@@ -12,7 +12,15 @@
     <p class="card-text">Résumé : {{book.resume}}</p>
   </div>
     <div class="card-footer text-muted">
+    <div class="col-6">
     {{ book.isRead ? 'Déjà lu' : 'Pas encore lu' }}
+    </div>
+    <div class="col-4">
+    Emprunteur : {{book.borrow}}
+    </div>
+    <div class="col-2">
+    <a href="{{ path('book_edit', {'id' : book.id} ) }}">Edition</a>
+    </div>
   </div>
 </div>
 

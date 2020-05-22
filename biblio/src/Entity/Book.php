@@ -46,6 +46,11 @@ class Book
      */
     private $updatedAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Person", inversedBy="books")
+     */
+    private $borrow;
+
     public function __construct()
     {
         $this->createdAt = new \DateTime();
@@ -124,6 +129,18 @@ class Book
     public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getBorrow(): ?Person
+    {
+        return $this->borrow;
+    }
+
+    public function setBorrow(?Person $borrow): self
+    {
+        $this->borrow = $borrow;
 
         return $this;
     }

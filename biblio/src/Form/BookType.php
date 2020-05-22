@@ -43,6 +43,10 @@ class BookType extends AbstractType
                 'label' => 'Déjà lu ? *',
                 'required' => false
             ])
+            ->add('borrow', null, [
+                'label' => 'Emprunté par : ',
+                'required' => false,
+            ])
         ;
     }
 
