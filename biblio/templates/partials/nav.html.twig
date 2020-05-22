@@ -6,27 +6,29 @@
 
   <div class="collapse navbar-collapse" id="navbarColor03">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ path('main') }}">Index</a>
+      <li class="nav-item {{ app.request.attributes.get('_route') == 'main' ? 'active' : '' }}">
+         <a class="nav-link" href="{{ path('main') }}">Index</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Livres</a>
+        <a class="nav-link dropdown-toggle {{ app.request.attributes.get('_route') starts with 'book' ? 'active' : '' }}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Livres</a>
         <div class="dropdown-menu">
         <a class="dropdown-item" href="{{ path('book_browse') }}">Liste</a>
         <a class="dropdown-item" href="{{ path('book_add') }}">Ajout</a>
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personne</a>
+        <a class="nav-link dropdown-toggle {{ app.request.attributes.get('_route') starts with 'person' ? 'active' : '' }}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personne</a>
         <div class="dropdown-menu">
         <a class="dropdown-item" href="{{ path('person_browse') }}">Liste</a>
         <a class="dropdown-item" href="{{ path('person_add') }}">Ajout</a>
         </div>
       </li>
     </ul>
+     <!--
      <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
+    -->
   </div>
 </nav>
