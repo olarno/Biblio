@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Biblio ~ Ajout d'un livre{% endblock %}
+{% block title %}Biblio ~ Edition d'un livre{% endblock %}
 
 {% block body %}
 <div class="container">
 
 <div class="row">
-<h1>Ajout d'un livre</h1>
+<h1>Edition d'un livre</h1>
 </div>
 
 <div class="container">
@@ -15,6 +15,7 @@
 {{ form_row(form.Name) }}
 {{ form_row(form.Resume) }}
 {{ form_row(form.Author) }}
+
 {{ form_row(form.isRead) }}
 {{ form_row(form.borrow) }}
 

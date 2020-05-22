@@ -18,25 +18,20 @@
       <th scope="col">Auteur</th>
       <th scope="col">Resume</th>
       <th scope="col">Lu/ pas lu</th>
+      <th scope="col">Emprunté par</th>
     </tr>
   </thead>
   <tbody>
   {% for book in books %}
-    <tr class="table-light">
+    <tr class="table-{{ book.borrow is null ? 'light' : 'dark' }}">
       <td> <a href="{{ path('book_read', {'id' : book.id}) }}">
       {{book.name}}</a></td>
       <td>{{book.author}}</td>
       <td>{{book.resume|slice(0, 30)}}... <a class="text-muted" href="{{path('book_read', {'id' : book.id})}}">Lire la suite</a> </td>
       <td>{{book.isRead}}</td>
+      <td>{{book.borrow}}</td>
     </tr>
  {% endfor %}
-
-     <tr class="table-primary">
-      <th scope="row">Primary</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
   </tbody>
 </table> 
 
