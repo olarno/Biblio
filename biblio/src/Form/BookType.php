@@ -35,10 +35,7 @@ class BookType extends AbstractType
                 'constraints' => [
                     new Length([
                         'min' => 2,
-                        'max' => 150,
-                        'minMessage' => 'Your first name must be at least {{ limit }} characters long',
-                        'maxMessage' => 'Your first name cannot be longer than {{ limit }} characters',
-                        'allowEmptyString' => false,
+                        'minMessage' => 'Le résumé ne peut pas être aussi court',
                     ])
                 ]
             ])

@@ -18,13 +18,22 @@ class BookController extends AbstractController
     /**
      * @Route("/", name="browse")
      */
-    public function Browse(BookRepository $bookRepository)
+    public function browse(BookRepository $bookRepository)
     {
         $books = $bookRepository->findAll();
 
         return $this->render('book/browse.html.twig', [
             'controller_name' => 'BookController',
             'books' => $books
+        ]);
+    }
+       /**
+     * @Route("/{id}", name="read", requirements={"id":"\d+"})
+     */
+    public function read(Book $book)
+    {
+        return $this->render('book/read.html.twig', [
+           'book' => $book
         ]);
     }
         /**

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Biblio ~ {{book.name}}{% endblock %}
+
+{% block body %}
+<div class="container">
+
+<div class="card text-white bg-{{ book.isRead ? 'dark' : 'light' }} mt-3">
+  <div class="card-header">Title: {{book.name}}</div>
+  <div class="card-body">
+    <h4 class="card-title">Auteur : {{book.author}}</h4>
+    <p class="card-text">Résumé : {{book.resume}}</p>
+  </div>
+    <div class="card-footer text-muted">
+    {{ book.isRead ? 'Déjà lu' : 'Pas encore lu' }}
+  </div>
+</div>
+
+</div>
+
+{% endblock %}

@@ -6,6 +6,12 @@
 
 <div class="container">
 
+<div class="row">
+<h3>
+  Livres stockés
+</h3>
+</div>
+
 <table class="table table-hover mt-3">
   <thead>
     <tr>
@@ -18,17 +24,20 @@
   </thead> 
 {% for book in books %}
     <tr class="table-{% if loop.index is even %}light{% else %}dark{% endif %}">
-   
-      <td>{{book.name}}</td>
+      <td> <a href="{{ path('book_read', {'id' : book.id}) }}">
+      {{book.name}}</a></td>
       <td>{{book.author}}</td>
-      <td>{{book.resume}}</td>
+      <td>{{book.resume|slice(0, 30)}}... <a class="text-muted" href="{{path('book_read', {'id' : book.id})}}">Lire la suite</a> </td>
       <td>{{book.isRead}}</td>
     </tr>
 {% endfor %}
   </tbody>
-</table> 
+</table>
+
+
+
+
 
 </div>
-
 {% endblock %}
 
