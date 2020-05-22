@@ -12,7 +12,7 @@ technos : symfony
 
 Créer une base contenant mes livres :heavy_check_mark:  
 Ajouter des options telles que (lus / pas lus, preté : X /V) :heavy_check_mark:  
-Ajouter un syteme de notations :heavy_exclamation_mark:
+Ajouter un syteme de notations :heavy_exclamation_mark:  
 Ajouter un syteme de recherche interne :heavy_exclamation_mark:
 
 ### Documentation 
